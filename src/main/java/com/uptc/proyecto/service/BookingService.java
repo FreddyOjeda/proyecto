@@ -39,7 +39,7 @@ public class BookingService {
         return repository.findAll();
     }
 
-    public Booking update(Booking booking, int id){
+    public Booking update(int id,Booking booking){
         Optional<Booking> optional = repository.findById(id);
         List<Booking> aux= repository.findByCar(booking.getCar());
         for (Booking b: aux) {
